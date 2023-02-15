@@ -1,0 +1,10 @@
+.ContainerCalc {
+  display: flex;
+  flex-direction: column;
+}
+
+.Result {
+  background: chartreuse;
+  margin: 0;
+}
+
