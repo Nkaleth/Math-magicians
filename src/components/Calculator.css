@@ -5,9 +5,10 @@
 }
 
 .Result {
-  background: gray;
+  background: #858693;
   height: 40px;
   margin: 0;
+  color: white;
   padding-right: 1%;
   display: flex;
   justify-content: flex-end;
@@ -27,13 +28,13 @@
 .Numbers {
   width: 100%;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 25% 25% 25% 25%;
 }
 
 .lastrowNum {
   display: grid;
-  grid-template-columns: 66% 33%;
+  grid-template-columns: 66.66% 33.33%;
 }
 
 .Operators {
@@ -50,6 +51,9 @@
 .ButtonClassOper {
   width: 100%;
   height: 50px;
-  color: orangered;
-  box-shadow: 0 0 5px orangered;
+  background: #f5913e;
+  border: none;
+  border-bottom: 0.1px solid;
+  border-right: 0.1px solid;
+  border-left: 0.1px solid;
 }
