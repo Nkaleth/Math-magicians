@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.f0ddc74b.css","mappings":"AAAA,eACE,YAAa,CACb,qBACF,CAEA,QACE,kBAAsB,CACtB,QACF","sources":["components/Calculator.css"],"sourcesContent":[".ContainerCalc {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.Result {\r\n  background: chartreuse;\r\n  margin: 0;\r\n}\r\n\r\n"],"names":[],"sourceRoot":""}
