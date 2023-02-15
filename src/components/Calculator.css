@@ -1,10 +1,54 @@
 .ContainerCalc {
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
 
 .Result {
-  background: chartreuse;
+  background: gray;
+  height: 40px;
   margin: 0;
+  padding-right: 1%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Totalbuttons{
+  display: flex;
+}
+.ButtonsCont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+.Numbers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 25% 25% 25% 25%;
+
+}
+
+.lastrowNum {
+  display: grid;
+  grid-template-columns: 66% 33%;
+}
+
+.Operators {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ButtonClass {
+  width: 100%;
+  height: 50px;
+}
+
+.ButtonClassOper {
+  width: 100%;
+  height: 50px;
+  color: orangered;
+  box-shadow: 0 0 5px orangered;
+}
