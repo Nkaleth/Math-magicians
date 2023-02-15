@@ -13,9 +13,11 @@
   justify-content: flex-end;
   align-items: center;
 }
-.Totalbuttons{
+
+.Totalbuttons {
   display: flex;
 }
+
 .ButtonsCont {
   width: 100%;
   display: flex;
@@ -27,7 +29,6 @@
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 25% 25% 25% 25%;
-
 }
 
 .lastrowNum {
