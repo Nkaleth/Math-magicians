@@ -1,6 +1,6 @@
 import React from 'react';
 import './Calculator.css';
-import { ButtonNumbers, ButtonOperator } from './Button';
+import ButtonCalculator from './Button';
 
 function Calculator() {
   return (
@@ -9,31 +9,30 @@ function Calculator() {
       <section className="Totalbuttons">
         <div className="ButtonsCont">
           <section className="Numbers">
-            <ButtonNumbers text="AC" />
-            <ButtonNumbers text="+/-" />
-            <ButtonNumbers text="%" />
-            <ButtonNumbers text="7" />
-            <ButtonNumbers text="8" />
-            <ButtonNumbers text="9" />
-            <ButtonNumbers text="4" />
-            <ButtonNumbers text="5" />
-            <ButtonNumbers text="6" />
-            <ButtonNumbers text="1" />
-            <ButtonNumbers text="2" />
-            <ButtonNumbers text="3" />
+            <ButtonCalculator text="AC" />
+            <ButtonCalculator text="+/-" />
+            <ButtonCalculator text="%" />
+            <ButtonCalculator text="7" />
+            <ButtonCalculator text="8" />
+            <ButtonCalculator text="9" />
+            <ButtonCalculator text="4" />
+            <ButtonCalculator text="5" />
+            <ButtonCalculator text="6" />
+            <ButtonCalculator text="1" />
+            <ButtonCalculator text="2" />
+            <ButtonCalculator text="3" />
           </section>
           <div className="lastrowNum">
-            <ButtonNumbers text="0" />
-            <ButtonNumbers text="." />
+            <ButtonCalculator text="0" />
+            <ButtonCalculator text="." />
           </div>
         </div>
         <section className="Operators">
-
-          <ButtonOperator text="÷" />
-          <ButtonOperator text="x" />
-          <ButtonOperator text="-" />
-          <ButtonOperator text="+" />
-          <ButtonOperator text="=" />
+          <ButtonCalculator text="÷" />
+          <ButtonCalculator text="x" />
+          <ButtonCalculator text="-" />
+          <ButtonCalculator text="+" />
+          <ButtonCalculator text="=" />
         </section>
       </section>
     </div>

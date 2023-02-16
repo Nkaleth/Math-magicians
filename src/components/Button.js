@@ -1,14 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import calculate from '../logic/calculate';
 
-const ButtonOperator = ({ text }) => <button type="submit" className="ButtonClassOper">{text}</button>;
-ButtonOperator.propTypes = {
+class ButtonCalculator extends React.Component {
+  constructor(props) {
+    super(props);
+    // this.state = { isPreset: false };
+
+    /* neccesay binding */
+    this.CalcuClick = this.CalcuClick.bind(this);
+  }
+
+  CalcuClick() {
+    const { text } = this.props;
+    // this.setState({  });
+    console.log(text);
+  }
+
+  render() {
+    const { text } = this.props;
+    if (text === '÷' || text === 'x' || text === '-' || text === '=' || text === '+') {
+      return (
+        <button onClick={this.CalcuClick} type="submit" className="ButtonClassOper">
+          { text }
+        </button>
+      );
+    }
+    return (
+      <button onClick={this.CalcuClick} type="submit" className="ButtonClass">
+        { text }
+      </button>
+    );
+  }
+}
+
+ButtonCalculator.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-const ButtonNumbers = ({ text }) => <button type="submit" className="ButtonClass">{text}</button>;
-ButtonNumbers.propTypes = {
-  text: PropTypes.string.isRequired,
-};
-
-export { ButtonOperator, ButtonNumbers };
+export default ButtonCalculator;
