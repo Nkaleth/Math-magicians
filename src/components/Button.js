@@ -1,14 +1,24 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-const ButtonOperator = ({ text }) => <button type="submit" className="ButtonClassOper">{text}</button>;
-ButtonOperator.propTypes = {
+function ButtonCalculator({ text, funcClick }) {
+  if (text === '÷' || text === 'x' || text === '-' || text === '=' || text === '+') {
+    return (
+      <button onClick={funcClick} type="button" className="ButtonClassOper" name={text}>
+        { text }
+      </button>
+    );
+  }
+  return (
+    <button onClick={funcClick} type="button" className="ButtonClass" name={text}>
+      { text }
+    </button>
+  );
+}
+
+ButtonCalculator.propTypes = {
   text: PropTypes.string.isRequired,
+  funcClick: PropTypes.func.isRequired,
 };
 
-const ButtonNumbers = ({ text }) => <button type="submit" className="ButtonClass">{text}</button>;
-ButtonNumbers.propTypes = {
-  text: PropTypes.string.isRequired,
-};
-
-export { ButtonOperator, ButtonNumbers };
+export default ButtonCalculator;

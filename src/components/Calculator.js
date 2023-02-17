@@ -1,39 +1,45 @@
-import React from 'react';
+import { React, useState } from 'react';
 import './Calculator.css';
-import { ButtonNumbers, ButtonOperator } from './Button';
+import ButtonCalculator from './Button';
+import calculate from '../logic/calculate';
 
 function Calculator() {
+  const [calculatorObj, setCalculatorObj] = useState({});
+
+  const CalcuClick = (e) => {
+    setCalculatorObj(calculate(calculatorObj, e.target.innerText));
+  };
+
   return (
     <div className="ContainerCalc">
-      <p className="Result">0</p>
+      <p className="Result">{ calculatorObj.next || calculatorObj.total || 0 }</p>
       <section className="Totalbuttons">
         <div className="ButtonsCont">
           <section className="Numbers">
-            <ButtonNumbers text="AC" />
-            <ButtonNumbers text="+/-" />
-            <ButtonNumbers text="%" />
-            <ButtonNumbers text="7" />
-            <ButtonNumbers text="8" />
-            <ButtonNumbers text="9" />
-            <ButtonNumbers text="4" />
-            <ButtonNumbers text="5" />
-            <ButtonNumbers text="6" />
-            <ButtonNumbers text="1" />
-            <ButtonNumbers text="2" />
-            <ButtonNumbers text="3" />
+            <ButtonCalculator text="AC" funcClick={CalcuClick} />
+            <ButtonCalculator text="+/-" funcClick={CalcuClick} />
+            <ButtonCalculator text="%" funcClick={CalcuClick} />
+            <ButtonCalculator text="7" funcClick={CalcuClick} />
+            <ButtonCalculator text="8" funcClick={CalcuClick} />
+            <ButtonCalculator text="9" funcClick={CalcuClick} />
+            <ButtonCalculator text="4" funcClick={CalcuClick} />
+            <ButtonCalculator text="5" funcClick={CalcuClick} />
+            <ButtonCalculator text="6" funcClick={CalcuClick} />
+            <ButtonCalculator text="1" funcClick={CalcuClick} />
+            <ButtonCalculator text="2" funcClick={CalcuClick} />
+            <ButtonCalculator text="3" funcClick={CalcuClick} />
           </section>
           <div className="lastrowNum">
-            <ButtonNumbers text="0" />
-            <ButtonNumbers text="." />
+            <ButtonCalculator text="0" funcClick={CalcuClick} />
+            <ButtonCalculator text="." funcClick={CalcuClick} />
           </div>
         </div>
         <section className="Operators">
-
-          <ButtonOperator text="÷" />
-          <ButtonOperator text="x" />
-          <ButtonOperator text="-" />
-          <ButtonOperator text="+" />
-          <ButtonOperator text="=" />
+          <ButtonCalculator text="÷" funcClick={CalcuClick} />
+          <ButtonCalculator text="x" funcClick={CalcuClick} />
+          <ButtonCalculator text="-" funcClick={CalcuClick} />
+          <ButtonCalculator text="+" funcClick={CalcuClick} />
+          <ButtonCalculator text="=" funcClick={CalcuClick} />
         </section>
       </section>
     </div>
