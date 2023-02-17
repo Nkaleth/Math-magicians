@@ -1,37 +1,36 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-// import calculate from '../logic/calculate';
+import { React, useState } from 'react';
+import calculate from '../logic/calculate';
 
-class ButtonCalculator extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.state = { isPreset: false };
+function ButtonCalculator(props) {
+  const [calculatorObj, setCalculatorObj] = useState({});
 
-    /* neccesay binding */
-    this.CalcuClick = this.CalcuClick.bind(this);
+  function CalcuClick(e) {
+    const { name } = e.target;
+    console.log(typeof (name));
+    setCalculatorObj(calculate(calculatorObj, name));
+    console.log(calculatorObj);
+    // const { text } = this.props;
+    // const { calcObj } = this.state;
+
+    // console.log(result);
+    const display = document.querySelector('.Result');
+    display.innerHTML = name;
   }
+  const { text } = props;
 
-  CalcuClick() {
-    const { text } = this.props;
-    // this.setState({  });
-    console.log(text);
-  }
-
-  render() {
-    const { text } = this.props;
-    if (text === '÷' || text === 'x' || text === '-' || text === '=' || text === '+') {
-      return (
-        <button onClick={this.CalcuClick} type="submit" className="ButtonClassOper">
-          { text }
-        </button>
-      );
-    }
+  if (text === '÷' || text === 'x' || text === '-' || text === '=' || text === '+') {
     return (
-      <button onClick={this.CalcuClick} type="submit" className="ButtonClass">
+      <button onClick={CalcuClick} type="submit" className="ButtonClassOper" name={text}>
         { text }
       </button>
     );
   }
+  return (
+    <button onClick={CalcuClick} type="submit" className="ButtonClass" name={text}>
+      { text }
+    </button>
+  );
 }
 
 ButtonCalculator.propTypes = {
