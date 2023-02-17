@@ -47,8 +47,6 @@
     <li><a href="https://www.w3schools.com/css/">CSS</a></li>
      <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
      <li><a href="hhttps://reactjs.org/">ReactJs</a></li>
-     <li><a href="https://aws.amazon.com/what-is/api/">API</a></li>
-     
   </ul>
 </details>
 
@@ -61,6 +59,9 @@
 - **Learn how to use proper ES6 syntax.**
 - **Use ES6 modules to write modular JavaScript.**
 - **Follow Gitflow.**
+- **Handle events in a React app.**
+- **Use React life cycle methods.**
+- **Understand the mechanism of lifting state up.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +115,7 @@ Install this project with:
 Change the main branch to the right one, execute the following command:
 
 ```sh
-  git checkout development
+  git checkout event
 ```
 
 ### Usage II
@@ -146,7 +147,7 @@ To run the stylehint linter
 To run the ESLint linter
 
 ```sh
-  npx eslint .
+  npx eslint "**/*.{js,jsx}" 
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -167,8 +168,6 @@ To run the ESLint linter
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Use Components, Events.**
-- **Refactor with hooks**
 - **Tests**
 - **Deploy**
 
