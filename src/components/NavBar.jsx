@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from 'react-router-dom';
+import '../styles/NavBar.css';
 
 const links = [
   { path: '/', text: 'Home' },
@@ -8,14 +9,17 @@ const links = [
 
 const NavBar = () => (
   <div>
-    <h1>Math Magicians</h1>
-    <ul>
-      { links.map((link) => (
-        <li key={link.text}>
-          <NavLink to={link.path}>{link.text}</NavLink>
-        </li>
-      ))}
-    </ul>
+    <div className="contNav">
+      <h1>Math Magicians</h1>
+      <ul className="linkBar">
+        { links.map((link) => (
+          <li key={link.text}>
+            <NavLink to={link.path}>{link.text}</NavLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <hr />
     <Outlet />
   </div>
 );

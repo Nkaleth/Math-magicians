@@ -1,0 +1,19 @@
+.quote {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote h2 {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.quote p {
+  margin-top: 0;
+  width: 100%;
+  text-align: end;
+  margin-right: 2em;
+}

@@ -115,7 +115,7 @@ Install this project with:
 Change the main branch to the right one, execute the following command:
 
 ```sh
-  git checkout event
+  git checkout full_website
 ```
 
 ### Usage II
@@ -168,7 +168,6 @@ To run the ESLint linter
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Tests**
 - **Deploy**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
