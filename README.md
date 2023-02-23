@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Math Magicians](https://nkaleth.github.io//Math-magicians/)
+[Math Magicians](https://reactproject-math-magicians.onrender.com/)
 
 
 <!-- > Here you can visit my live demo : -->
