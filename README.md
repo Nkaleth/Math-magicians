@@ -115,7 +115,7 @@ Install this project with:
 Change the main branch to the right one, execute the following command:
 
 ```sh
-  git checkout full_website
+  git checkout dev
 ```
 
 ### Usage II
