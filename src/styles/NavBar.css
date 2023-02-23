@@ -1,0 +1,16 @@
+.contNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkBar {
+  all: unset;
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
+}
+
+.linkBar li {
+  list-style: none;
+  margin: 3%;
+}
